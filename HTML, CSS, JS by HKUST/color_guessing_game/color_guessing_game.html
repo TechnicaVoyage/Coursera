@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Color Guessing game</title>
+</head>
+<body>
+	<script type="text/javascript">
+	var colors=["Azure","Black","Coral","DarkKhaki","Gold","LawnGreen","Maroon","Navy","SandyBrown","Yellow"];
+	var finished = false;
+	var random_num = Math.random() * colors.length;
+	random_num = Math.floor(random_num);
+	colors.sort();
+	var random_color = colors[random_num];
+	var inList = false;
+	var number_of_tries=0;
+	console.log("color is "+random_color);
+	do{
+		var guessed_color = prompt("I have picked a color from the following list:\n\n"+colors+".\n\nGuess the color!");
+		console.log("Char 0 of guessed_color is "+guessed_color.charCodeAt(0)+" and of random_color is "+ random_color.charCodeAt(0));
+		for (var i = 0; i <colors.length; i++) {
+			if(guessed_color==colors[i])
+			inList = true;
+		}
+		if (!inList)
+		alert("The color you entered is not in the list. Please pick the color from the list:\n\n"+colors+".");
+		else if(guessed_color==random_color){
+			number_of_tries++
+			document.body.style.background = random_color;
+			alert("You have guessed the color!\nIt was "+random_color+" indeed!\n\nYou took "+number_of_tries+" tries.");
+			finished = true;
+		}
+		else if(guessed_color.charAt(0)>random_color.charAt(0)){
+			alert("Sorry, your guess is incorrect!\n\nHint: Your color is alphabetically higher than mine.\n\nPlease try again.");
+			number_of_tries++;
+		}
+		else if(guessed_color.charAt(0)<random_color.charAt(0)){
+			alert("Sorry, your guess is incorrect!\n\nHint: Your color is alphabetically lower than mine.\n\nPlease try again.");
+			number_of_tries++;
+		}
+		else if(guessed_color.charAt(0)==random_color.charAt(0)){
+			if(guessed_color.charAt(1)>random_color.charAt(1)){
+				alert("Sorry, your guess is incorrect!\n\nHint: Your color is alphabetically higher than mine.\n\nPlease try again.");
+				number_of_tries++;
+			}
+			else if(guessed_color.charAt(1)<random_color.charAt(1)){
+				alert("Sorry, your guess is incorrect!\n\nHint: Your color is alphabetically lower than mine.\n\nPlease try again.");
+				number_of_tries++;
+			}
+			else if(guessed_color.charAt(1)==random_color.charAt(1)){
+				if(guessed_color.charAt(2)>random_color.charAt(2)){
+					alert("Sorry, your guess is incorrect!\n\nHint: Your color is alphabetically higher than mine.\n\nPlease try again.");
+					number_of_tries++;
+				}
+				else if(guessed_color.charAt(2)<random_color.charAt(2)){
+					alert("Sorry, your guess is incorrect!\n\nHint: Your color is alphabetically lower than mine.\n\nPlease try again.");
+					number_of_tries++;
+				}
+			}
+		}
+	}while(!finished);
+	</script>
+</body>
+</html>
