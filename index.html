@@ -118,14 +118,14 @@
             </div>
             <div class="form-group">
               <label class="col-sm-3 control-label" for="sect">Section</label>
-                <div class="btn-group" data-toggle="buttons" id="sect">
-                  <label class="btn btn-success active">
-                    <input type="radio" name="options" id="non_smoking" checked>Non-Smoking
-                  </label>
-                  <label class="btn btn-danger">
-                    <input type="radio" name="options" id="smoking">Smoking
-                  </label>
-                </div>
+              <div class="btn-group col-sm-9" data-toggle="buttons" id="sect">
+                <label class="btn btn-success active">
+                  <input type="radio" name="options" id="non_smoking" checked>Non-Smoking
+                </label>
+                <label class="btn btn-danger">
+                  <input type="radio" name="options" id="smoking">Smoking
+                </label>
+              </div>
             </div>
             <div class="form-group has-feedback">
               <label class="col-sm-3 control-label" for="datetime">Date and Time</label>
@@ -312,8 +312,8 @@
   <script src="bower_components/jquery/dist/jquery.min.js"></script>
   <script src="./bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
   <script>
+  $("#mycarousel").carousel( {interval: 2000} );
   $(document).ready(function(){
-    $("#mycarousel").carousel( { interval: 2000 } );
     $("#carousel-pause").click(function(){
       $("#mycarousel").carousel('pause');
     });
