@@ -84,5 +84,5 @@ angular.module('confusionApp').controller('MenuController',['$scope','menuFactor
     $scope.commentForm.$setPristine();
     //Step 5: reset your JavaScript object that holds your comment
     $scope.comm = {rating:5,comment:"",author:"",date:""};
-  }
+  };
 }]);
