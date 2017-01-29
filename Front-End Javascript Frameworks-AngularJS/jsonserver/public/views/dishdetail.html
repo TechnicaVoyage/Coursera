@@ -21,8 +21,8 @@
       </div>
     </div>
     <div class="col-xs-9 col-xs-offset-1">
-      <h4><strong>Customer Comments</strong><span>&emsp; &emsp; Sort by: &emsp; <input type="text" name="sort" ng-model="dish.order"></span></h4>
-      <blockquote ng-repeat="dish in dish.comments | orderBy:dish.order">
+      <h4><strong>Customer Comments</strong><span>&emsp; &emsp; Sort by: &emsp; <input type="text" name="sort" ng-model="orderText"></span></h4>
+      <blockquote ng-repeat="dish in dish.comments | orderBy:orderText">
         <p>{{dish.rating}} Stars</p>
         <p>{{dish.comment}}</p>
         <footer>{{dish.author}}, {{dish.date | date : 'mediumDate'}}</footer>

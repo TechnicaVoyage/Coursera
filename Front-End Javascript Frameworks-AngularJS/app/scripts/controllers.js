@@ -120,7 +120,7 @@ angular.module('confusionApp').controller('MenuController',['$scope','menuFactor
     function(response) {
         $scope.message = "Error: " + response.status + " " + response.statusText;
     }
-  )
+  );
   var promotion = menuFactory.getPromotion(0);
   $scope.promotion = promotion;
   var leader = corporateFactory.getLeader(3);
