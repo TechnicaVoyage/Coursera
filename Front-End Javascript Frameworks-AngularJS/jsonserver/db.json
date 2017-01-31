@@ -215,5 +215,19 @@
       "description": "Award winning three-star Michelin chef with wide International experience having worked closely with whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion experiences. He says, Put together the cuisines from the two craziest cultures, and you get a winning hit! Amma Mia!"
     }
   ],
-  "feedback": []
+  "feedback": [
+    {
+      "mychannel": "",
+      "firstName": "Technica",
+      "lastName": "Voyage",
+      "agree": false,
+      "email": "technica@github.com",
+      "tel": {
+        "areaCode": "123",
+        "number": "987654321"
+      },
+      "comments": "Visit \nhttps://technicavoyage.github.io/Full-Stack-Web-Development/",
+      "id": 1
+    }
+  ]
 }
